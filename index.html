@@ -15,8 +15,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: black;
+            background:url("https://images2.alphacoders.com/805/805200.jpg");
             overflow: hidden;
+            background-size: cover;
+            
         }
         .container {
             font-size: 10px;
@@ -90,6 +92,17 @@
             background-size: cover;
         }
 
+        .expandable-box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: height 0.3s ease-in-out; 
+    }
+
         @keyframes orbit-earth {
             to {
                 transform: rotate(360deg);
@@ -101,14 +114,20 @@
                 transform: rotate(360deg);
             }
         }
+       a{
+        text-decoration: none;
+        
+       }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="sun"></div>
-        <div class="earth">
+        <a href="https://goo.gl/maps/JZ7knnD1NDJmdnux6" class="earth" >
+            
             <div class="moon"></div>
-        </div>
+        </a>
     </div>
 </body>
+
 </html>
