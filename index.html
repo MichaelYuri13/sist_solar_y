@@ -7,17 +7,23 @@
     <style>
         html{
             background-color: rgba(0, 0, 0, 0);
+            background:url("https://images2.alphacoders.com/805/805200.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
+      
         body {
             margin: 0;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background:url("https://images2.alphacoders.com/805/805200.jpg");
+            
             overflow: hidden;
             background-size: cover;
+            background-repeat: no-repeat;
+            animation: rotate-body 20s linear infinite;
             
         }
         .container {
@@ -44,6 +50,7 @@
             background-repeat: no-repeat;
             border-radius: 50%;
             box-shadow: 0 0 3em rgb(255, 255, 255);
+            animation: glow 3s ease-in-out infinite alternate;
         }
         .earth, .moon {
             position: absolute;
@@ -102,6 +109,17 @@
         cursor: pointer;
         transition: height 0.3s ease-in-out; 
     }
+    @keyframes glow {
+            to {
+                box-shadow: 0em 0em 6em white;
+            }
+        }
+
+    @keyframes rotate-body {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
         @keyframes orbit-earth {
             to {
@@ -121,13 +139,15 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sun"></div>
-        <a href="https://goo.gl/maps/JZ7knnD1NDJmdnux6" class="earth" >
-            
-            <div class="moon"></div>
-        </a>
-    </div>
+   
+        <div class="container">
+            <div class="sun"></div>
+            <a href="https://goo.gl/maps/JZ7knnD1NDJmdnux6" class="earth" >
+        
+                <div class="moon"></div>
+            </a>
+        </div>
+    
 </body>
 
 </html>
